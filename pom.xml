@@ -4,25 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 
-<!-- Базова інформація про проєкт -->
+
 <groupId>org.example</groupId>
 <artifactId>Maven</artifactId>
 <version>1.0-SNAPSHOT</version>
 
-<!-- Опис проєкту -->
+
 <name>My Name Project</name>
 <description>A sample Maven project to print name and last name as JSON</description>
 
-<!-- Версія Java -->
+
 <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
 
-<!-- Залежності -->
+
 <dependencies>
-    <!-- Додаткові залежності можна додати тут -->
+
     <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
@@ -30,11 +30,10 @@
     </dependency>
 </dependencies>
 
-<!-- Плагіни -->
+
 <build>
     <plugins>
-        <!-- Додаткові плагіни можна додати тут -->
-        <!-- Настроюємо Maven Shade Plugin для створення Fat JAR -->
+
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
@@ -51,7 +50,7 @@
                                 <mainClass>org.example.Main</mainClass>
                             </transformer>
                         </transformers>
-                        <!-- Визначаємо ім'я артефакту -->
+
                         <finalName>myname</finalName>
                     </configuration>
                 </execution>
